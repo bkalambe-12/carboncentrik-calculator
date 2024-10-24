@@ -14,7 +14,7 @@ EMISSION_FACTORS = {
 st.set_page_config(layout="wide", page_title="Personal Carbon Calculator")
 
 # Streamlit app code
-st.title("Personal Carbon Calculator App ⚠️")
+st.title("Personal Carbon Calculator App ")
 
 # User inputs
 st.subheader("🌍 Your Country")
@@ -23,14 +23,14 @@ country = st.selectbox("Select", ["India"])
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("🚗 Daily commute distance (in km)")
+    st.subheader("🚗 Daily commute distance (km)")
     distance = st.slider("Distance", 0.0, 100.0, key="distance_input")
 
-    st.subheader("💡 Monthly electricity consumption (in kWh)")
+    st.subheader("💡 Monthly electricity consumption (kWh)")
     electricity = st.slider("Electricity", 0.0, 1000.0, key="electricity_input")
 
 with col2:
-    st.subheader("🍽️ Waste generated per week (in kg)")
+    st.subheader("🍽️ Waste generated per week (kg)")
     waste = st.slider("Waste", 0.0, 100.0, key="waste_input")
 
     st.subheader("🍽️ Number of meals per day")
